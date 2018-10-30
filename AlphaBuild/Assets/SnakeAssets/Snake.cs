@@ -8,7 +8,7 @@ public class Snake : MonoBehaviour {
     // (by default it moves to the right)
     // Did the snake eat something?
 	bool ate = false;
-
+	private float speed = 0.1f;
 	// Tail Prefab
 	public GameObject tailPrefab;
     Vector2 dir = Vector2.right;
@@ -18,7 +18,7 @@ public class Snake : MonoBehaviour {
     // Use this for initialization
     void Start () {
         // Move the Snake every 300ms
-        InvokeRepeating("Move", 0.1f, 0.1f);    
+        InvokeRepeating("Move", speed, speed);    
     }
     
     // Update is called once per frame
@@ -67,6 +67,7 @@ public class Snake : MonoBehaviour {
 
         // Reset the flag
         ate = false;
+        speed = speed * .7f;
     }
     // Do we have a Tail?
     else if (tail.Count > 0) {
@@ -90,6 +91,7 @@ public class Snake : MonoBehaviour {
     }
     // Collided with Tail or Border
     else {
+    	Destroy(coll.gameObject);
         // ToDo 'You lose' screen
     }
 	}
