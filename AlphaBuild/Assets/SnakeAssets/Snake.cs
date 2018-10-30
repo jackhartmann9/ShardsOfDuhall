@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 public class Snake : MonoBehaviour {
-    // Current Movement Direction
-    // (by default it moves to the right)
-    // Did the snake eat something?
+    private int score = 0;
 	bool ate = false;
-	private float speed = 0.1f;
-	// Tail Prefab
+	private float speed = 0.02f;
+	public Text scoreText;
+    public Text timeText;
+    private float timeLeft = 60.0f;
 	public GameObject tailPrefab;
     Vector2 dir = Vector2.right;
     // Keep Track of Tail
@@ -23,6 +24,8 @@ public class Snake : MonoBehaviour {
     
     // Update is called once per frame
     void Update() {
+        timeLeft -= Time.deltaTime;
+        timeText.text = (timeLeft).ToString("0");
     // Move in a new Direction?
 	    if (Input.GetKey(KeyCode.RightArrow))
 	        dir = Vector2.right;
@@ -43,6 +46,8 @@ public class Snake : MonoBehaviour {
 
     // Ate something? Then insert new Element into gap
     if (ate) {
+        score++;
+        scoreText.text = score.ToString();
         // Load Prefab into the world
         GameObject g =(GameObject)Instantiate(tailPrefab,
                                               v,
@@ -81,19 +86,20 @@ public class Snake : MonoBehaviour {
 }
 
     void OnTriggerEnter2D(Collider2D coll) {
-    // Food?
-    if (coll.name.StartsWith("FoodPrefab")) {
-        // Get longer in next Move call
-        ate = true;
-        
-        // Remove the Food
-        Destroy(coll.gameObject);
-    }
-    // Collided with Tail or Border
-    else {
-    	Destroy(coll.gameObject);
-        // ToDo 'You lose' screen
-    }
+        // Food?
+        if (coll.name.StartsWith("FoodPrefab")) {
+            // Get longer in next Move call
+            ate = true;
+            
+            // Remove the Food
+            Destroy(coll.gameObject);
+        }
+        // Collided with Tail or Border
+        if (coll.gameObject.tag == "EndGame") {
+        	Debug.Log("Dead");
+            Destroy(this);
+            // ToDo 'You lose' screen
+        }
 	}
 
 
