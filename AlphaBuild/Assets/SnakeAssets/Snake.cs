@@ -18,7 +18,6 @@ public class Snake : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        // Move the Snake every 300ms
         InvokeRepeating("Move", speed, speed);    
     }
     
@@ -38,10 +37,8 @@ public class Snake : MonoBehaviour {
 	}
     
    void Move() {
-    // Save current position (gap will be here)
     Vector2 v = transform.position;
 
-    // Move head into new direction (now there is a gap)
     transform.Translate(dir);
 
     // Ate something? Then insert new Element into gap
