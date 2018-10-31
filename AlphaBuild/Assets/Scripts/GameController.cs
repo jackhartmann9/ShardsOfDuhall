@@ -1,72 +1,73 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-    [SerializeField] private Text questionText;
+    public Question[] questions;
+    private static List<Question> unansweredQuestions;
+
+    private Question currentQuestion;
+    public static int score;
+
+    [SerializeField] private Text factText;
     [SerializeField] private Text scoreText;
-
-    private DataController dataController;
-    private RoundData currentRoundData;
-    private QuestionData[] questionPool;
-
-    public GameObject questionDisplay;
-    public GameObject roundEndDisplay;
-
-    private bool isRoundActive;
-    private float timeRemaining;
-    private int questionIndex;
-    private int playerScore;
+    [SerializeField] private float answerDelay = 1f;
 
     private void Start()
     {
-        dataController = FindObjectOfType<DataController>();
-        currentRoundData = dataController.GetCurrentRoundData();
-        questionPool = currentRoundData.questions;
-        timeRemaining = currentRoundData.timeLimitInSeconds;
-
-        playerScore = 0;
-        questionIndex = 0;
-
-        ShowQuestion();
-        isRoundActive = true;
-
-    }
-
-    private void ShowQuestion()
-    {
-        QuestionData questionData = questionPool[questionIndex];
-        questionText.text = questionData.questionText;
-        //answerButton.Setup(answerData);
-
-    }
-
-    public void AnswerButtonClicked(bool isCorrect)
-    {
-        if (isCorrect)
+        scoreText.text = "Score: " + score;
+        if (unansweredQuestions == null || unansweredQuestions.Count == 0)
         {
-            playerScore += currentRoundData.pointsAddedForCorrectAnswer;
-            scoreText.text = "Score: " + playerScore.ToString();
+            unansweredQuestions = questions.ToList<Question>();
         }
 
-        if (questionPool.Length > questionIndex + 1)
+        SetCurrentQuestion();
+        
+    }
+
+    void SetCurrentQuestion()
+    {
+        int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
+        currentQuestion = unansweredQuestions[randomQuestionIndex];
+
+        factText.text = currentQuestion.fact;
+    }
+
+    IEnumerator TransitionToNextQuestion()
+    {
+        unansweredQuestions.Remove(currentQuestion);
+
+        yield return new WaitForSeconds(answerDelay);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void UserSelectTrue()
+    {
+        if (currentQuestion.isTrue)
         {
-            questionIndex++;
-            ShowQuestion();
+            score++;
+            scoreText.text = "Score: " + score;
         } else
         {
-            EndRound();
+            Debug.Log("Wrong!");
         }
+        StartCoroutine(TransitionToNextQuestion());
     }
-
-    public void EndRound()
+    public void UserSelectFalse()
     {
-        isRoundActive = false;
-
-        questionDisplay.SetActive(false);
-        roundEndDisplay.SetActive(true);
+        if (!currentQuestion.isTrue)
+        {
+            score++;
+            scoreText.text = "Score: " + score;
+        } else
+        {
+            Debug.Log("Wrong!");
+        }
+        StartCoroutine(TransitionToNextQuestion());
     }
 }
