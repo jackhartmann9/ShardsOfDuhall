@@ -4,10 +4,8 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class Question {
+public class QuestionData {
 
-    public string fact;
-    public bool isTrue;
-
-
+    public string questionText;
+    public AnswerData[] answers;
 }
