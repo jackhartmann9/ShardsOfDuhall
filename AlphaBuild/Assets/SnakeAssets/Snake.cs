@@ -19,9 +19,10 @@ public class Snake : MonoBehaviour {
 
 
     void Start () {
-        InvokeRepeating("Move", speed, speed);    
+        PlayerPrefs.SetInt("Score", 0);
+        InvokeRepeating("Move", speed, speed);
     }
-    
+
     // Update is called once per frame
     void Update() {
         timeLeft -= Time.deltaTime;
@@ -30,13 +31,13 @@ public class Snake : MonoBehaviour {
 	    if (Input.GetKey(KeyCode.RightArrow))
 	        dir = Vector2.right;
 	    else if (Input.GetKey(KeyCode.DownArrow))
-	        dir = -Vector2.up;    
+	        dir = -Vector2.up;
 	    else if (Input.GetKey(KeyCode.LeftArrow))
-	        dir = -Vector2.right; 
+	        dir = -Vector2.right;
 	    else if (Input.GetKey(KeyCode.UpArrow))
 	        dir = Vector2.up;
 	}
-    
+
    void Move() {
     Vector2 v = transform.position;
 
@@ -55,12 +56,12 @@ public class Snake : MonoBehaviour {
                                               v,
                                               Quaternion.identity);
 
-   
+
         tail.Insert(0, g1.transform);
         GameObject g2 =(GameObject)Instantiate(tailPrefab,
                                               v,
                                               Quaternion.identity);
- 
+
         tail.Insert(0, g2.transform);
         ate = false;
         speed = speed * .7f;
@@ -81,9 +82,10 @@ public class Snake : MonoBehaviour {
             ate = true;
             Destroy(coll.gameObject);
         }
-        
+
         if (coll.gameObject.tag == "EndGame") {
         	Debug.Log("Dead");
+          PlayerPrefs.SetInt("Score", score);
             Destroy(this);
             SceneManager.LoadScene("MainMenu");
             // ToDo 'You lose' screen

@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - EndGame
-  - Bad
-=======
-  - bullet
->>>>>>> Austin_Build
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,13 +13,8 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - Background
-  - Ground
-=======
   - 
   - 
->>>>>>> Austin_Build
   - 
   - 
   - 
