@@ -76,7 +76,7 @@ public class Snake : MonoBehaviour {
     }
 }
 
-    void OnTriggerEnter2D(Collider2D coll) {
+void OnTriggerEnter2D(Collider2D coll) {
         // Food?
         if (coll.name.StartsWith("FoodPrefab")) {
             ate = true;

@@ -5,6 +5,7 @@ public class Firewall : MonoBehaviour
 {
     public void NextScene()
     {
+				
         SceneManager.LoadScene("SideScroller");
     }
 }

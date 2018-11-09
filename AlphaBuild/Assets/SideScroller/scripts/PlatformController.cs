@@ -2,17 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlatformController : MonoBehaviour {
 
-
-    public bool facingRight = true;
-    public bool jump = false;
-    public float speed = 10f;
-    public float jumpForce = 1200f;
-    public float maxSpeed = 15f;
+    private float score = 0f;
+    private bool facingRight = true;
+    private bool jump = false;
+    private float speed = 8f;
+    private float jumpForce = 800f;
+    private float maxSpeed = 15f;
     bool isMovedLeft = false;
     bool isMovedRight = false;
+  	public Text scoreText;
+    public Text timeText;
     private float timeLeft = 60.0f;
 
     private bool grounded = false;
@@ -30,17 +33,25 @@ public class PlatformController : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+
+      scoreText.text = "Score: " + score.ToString();
       transform.eulerAngles = new Vector3 (0, 0, 0);
+      timeLeft -= Time.deltaTime;
+      timeText.text = "Time: " + (timeLeft).ToString("0");
 //        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        timeLeft -= Time.deltaTime;
+
         float newSpeed = 9f + (60f - timeLeft) / 4f;
-        Debug.Log("Speed = " + newSpeed);
+        //Debug.Log("Speed = " + newSpeed);
+
+        score = transform.position.x;
+
+        //Debug.Log("score == " + score);
+
         if(newSpeed > speed){
           speed = newSpeed;
         }
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("grounded and jumping");
             //jump = true;
             rb2d.AddForce(new Vector2(0f, jumpForce));
         }
@@ -80,6 +91,17 @@ public class PlatformController : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter2D(Collision2D coll) {
+            Debug.Log("Entered on > " + coll.gameObject.tag);
+
+            if (coll.gameObject.tag == "Bad") {
+            	Debug.Log("Dead");
+              PlayerPrefs.SetInt("Score", (int)score);
+                Destroy(this);
+                SceneManager.LoadScene("MainMenu");
+                // ToDo 'You lose' screen
+            }
+    	}
 
     void Flip()
     {
