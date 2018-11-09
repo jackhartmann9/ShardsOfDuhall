@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -98,6 +99,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    IEnumerator TimeOut()
+    {
+        yield return new WaitForSeconds(3);
+        PlayerPrefs.SetInt("Score", score);
+        Destroy(this);
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void ScorePoints(int pointsToAdd)
     {
         score += pointsToAdd;
@@ -112,5 +121,7 @@ public class Player : MonoBehaviour
     {
         finalScoreLabel.text = "Final Score: " + score;
         gameOverPanel.SetActive(true);
+        StartCoroutine(TimeOut());
     }
+
 }

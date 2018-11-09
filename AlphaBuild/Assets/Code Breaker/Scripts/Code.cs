@@ -29,7 +29,7 @@ public class Code : MonoBehaviour {
 
         player = GameObject.FindWithTag("Player");
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         //Screen wrapping
@@ -68,10 +68,6 @@ public class Code : MonoBehaviour {
             {
                 Instantiate(codeSmall, transform.position, transform.rotation);
                 Instantiate(codeSmall, transform.position, transform.rotation);
-            }
-            else if (codeSize == 1)
-            {
-                
             }
             //Give Points
             player.SendMessage("ScorePoints",points);

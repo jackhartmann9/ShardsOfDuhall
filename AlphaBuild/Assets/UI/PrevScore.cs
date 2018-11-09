@@ -19,10 +19,10 @@ public class PrevScore : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("curr score = " + score);
+		//Debug.Log("curr score = " + score);
 		score = PlayerPrefs.GetInt("Score");
 		scoreText.text = score.ToString();
 
-	  Debug.Log("curr score = " + score);
+	  //Debug.Log("curr score = " + score);
 	}
 }
