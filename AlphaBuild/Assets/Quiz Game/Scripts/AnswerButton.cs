@@ -30,6 +30,8 @@ public class AnswerButton : MonoBehaviour {
 	
 	public void HandleClick()
     {
+        Debug.Log(gameController == null ? "Game Controller is Null" : "Game Controller is Working");
+        Debug.Log(answerData == null ? "Answer Data is Null" : "Answer Data is Working");
         gameController.AnswerButtonClicked(answerData.isCorrect);
     }
 }

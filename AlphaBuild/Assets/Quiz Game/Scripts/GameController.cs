@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour {
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
+    private AnswerData answerData;
+    private AnswerButton answerButton;
 
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
@@ -24,6 +26,7 @@ public class GameController : MonoBehaviour {
     private void Start()
     {
         dataController = FindObjectOfType<DataController>();
+        answerButton = FindObjectOfType<AnswerButton>();
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
         timeRemaining = currentRoundData.timeLimitInSeconds;
@@ -40,7 +43,7 @@ public class GameController : MonoBehaviour {
     {
         QuestionData questionData = questionPool[questionIndex];
         questionText.text = questionData.questionText;
-        //answerButton.Setup(answerData);
+        answerButton.Setup(answerData);
 
     }
 
