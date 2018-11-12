@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - EndGame
-  - Bad
-  - Ground
-=======
-  - Enemy
->>>>>>> Zach_Build
+  tags: []
   layers:
   - Default
   - TransparentFX
