@@ -12,7 +12,7 @@ public class Snake : MonoBehaviour {
 	private float speed = 0.02f;
 	public Text scoreText;
     public Text timeText;
-    private float timeLeft = 60.0f;
+    private float timeLeft = 30.0f;
 	public GameObject tailPrefab;
     Vector2 dir = Vector2.right;
 	List<Transform> tail = new List<Transform>();
@@ -26,6 +26,9 @@ public class Snake : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         timeLeft -= Time.deltaTime;
+        if(timeLeft < 0f){
+          EndGame();
+        }
         timeText.text = (timeLeft).ToString("0");
     // Move in a new Direction
 	    if (Input.GetKey(KeyCode.RightArrow))
@@ -85,12 +88,16 @@ void OnTriggerEnter2D(Collider2D coll) {
 
         if (coll.gameObject.tag == "EndGame") {
         	Debug.Log("Dead");
-          PlayerPrefs.SetInt("Score", score);
-            Destroy(this);
-            SceneManager.LoadScene("MainMenu");
-            // ToDo 'You lose' screen
+          EndGame();
+
         }
 	}
+
+  void EndGame(){
+    PlayerPrefs.SetInt("Score", score);
+    Destroy(this);
+    SceneManager.LoadScene("MainMenu");
+  }
 
 
 }

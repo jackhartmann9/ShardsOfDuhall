@@ -15,7 +15,7 @@ public class PlatformController : MonoBehaviour {
     //Start to not allow double jumping
     private bool jump = false;
     private float speed = 8f;
-    private float jumpForce = 800f;
+    private float jumpForce = 1200f;
     //speed scales with time up to maxSpeed
     private float maxSpeed = 15f;
     bool isMovedLeft = false;

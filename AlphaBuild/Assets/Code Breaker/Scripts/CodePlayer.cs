@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class CodePlayer : MonoBehaviour
 {
     public Rigidbody2D rb;
     public KeyCode rotateL;
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         }
         transform.position = newPos;
 
-        scoreLabel.text = "Score: " + score;
+        //scoreLabel.text = "Score: " + score;
     }
 
     private void FixedUpdate()
