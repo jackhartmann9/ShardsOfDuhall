@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     public int objectSpeed = 5;
-    public GameObject obstaclePrefab;
-    private object collidedWith;
 
     // Use this for initialization
     void Start () {
-       
-        InvokeRepeating("Spawn", 1, 0);
 
     }
 	
@@ -25,29 +21,4 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    void Spawn()
-    {
-        int lane = 0;
-        int laneDecider = Random.Range(0, 4);
-        if(laneDecider == 1){
-            lane = 0;
-        }
-        else if(laneDecider == 2){
-            lane = 3;
-        }
-        else if(laneDecider == 3){
-            lane = -3;
-        }
-        // Instantiate the food at (x, y)
-        GameObject instantiateObstacle = Instantiate(obstaclePrefab) as GameObject;
-        instantiateObstacle.transform.position = new Vector3(8, lane ,1);
-    }
-
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "Player")
-        {
-            Destroy(coll.gameObject);
-        }
-    }
 }
