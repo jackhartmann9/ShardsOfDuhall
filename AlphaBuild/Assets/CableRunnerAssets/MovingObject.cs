@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class MovingObject : MonoBehaviour {
     public int objectSpeed = 5;
 
     // Use this for initialization
