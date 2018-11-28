@@ -21,6 +21,7 @@ public class Snake : MonoBehaviour {
     void Start () {
         PlayerPrefs.SetInt("Score", 0);
         InvokeRepeating("Move", speed, speed);
+        dir = Vector2.zero;
     }
 
     // Update is called once per frame
@@ -31,13 +32,13 @@ public class Snake : MonoBehaviour {
         }
         timeText.text = (timeLeft).ToString("0");
     // Move in a new Direction
-	    if (Input.GetKey(KeyCode.RightArrow))
+	    if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
 	        dir = Vector2.right;
-	    else if (Input.GetKey(KeyCode.DownArrow))
+	    else if (Input.GetKeyDown("s")|| Input.GetKeyDown("down"))
 	        dir = -Vector2.up;
-	    else if (Input.GetKey(KeyCode.LeftArrow))
+	    else if (Input.GetKeyDown("a")|| Input.GetKeyDown("left"))
 	        dir = -Vector2.right;
-	    else if (Input.GetKey(KeyCode.UpArrow))
+	    else if (Input.GetKeyDown("w")|| Input.GetKeyDown("up"))
 	        dir = Vector2.up;
 	}
 
