@@ -14,7 +14,7 @@ public class Runner : MonoBehaviour {
     // Use this for initialization
     void Start () {
         InvokeRepeating("SpawnEnemy", 1, 1);
-        InvokeRepeating("SpawnEnemy", 1, 4);
+        InvokeRepeating("SpawnEnemy", 1, 3);
         InvokeRepeating("SpawnPoint", 1, 2);
     }
 	

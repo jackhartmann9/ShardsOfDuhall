@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingObject : MonoBehaviour {
-    public int objectSpeed = 5;
+    public int objectSpeed = 10;
 
     // Use this for initialization
     void Start () {
