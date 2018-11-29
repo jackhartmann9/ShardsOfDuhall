@@ -6,6 +6,7 @@ public class QuickQScene : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("QuizGame");
+      SceneManager.LoadScene("QuizGame");
+        SceneManager.LoadScene("Persistent", LoadSceneMode.Additive);
     }
 }
