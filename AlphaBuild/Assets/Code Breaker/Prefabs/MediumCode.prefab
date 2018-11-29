@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4003889313260480}
   - component: {fileID: 212195347487460220}
   - component: {fileID: 50047505383277478}
-  - component: {fileID: 58000482290821252}
   - component: {fileID: 114596351695183544}
+  - component: {fileID: 58480782897460852}
   m_Layer: 0
   m_Name: MediumCode
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1990850372398200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.15, y: -3.34, z: 10.934166}
-  m_LocalScale: {x: 10.26, y: 10.26, z: 0.513}
+  m_LocalScale: {x: 1, y: 1, z: 0.513}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58000482290821252
+--- !u!58 &58480782897460852
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,9 +75,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00046093465}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.09032051
+  m_Radius: 2
 --- !u!114 &114596351695183544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50047505383277478}
-  maxThrust: 700
-  maxTorque: 700
+  maxThrust: 2000
+  maxTorque: 2000
   screenTop: 11
   screenBottom: -11
   screenRight: 14
@@ -136,8 +136,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.8949356, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b25f020302b32494995c1e93b785e2fd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

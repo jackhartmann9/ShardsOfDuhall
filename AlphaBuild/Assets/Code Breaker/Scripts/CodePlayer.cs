@@ -66,7 +66,7 @@ public class CodePlayer : MonoBehaviour
         }
         transform.position = newPos;
 
-        //scoreLabel.text = "Score: " + score;
+        scoreLabel.text = "Score: " + score;
     }
 
     private void FixedUpdate()

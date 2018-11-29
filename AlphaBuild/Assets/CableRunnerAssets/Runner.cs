@@ -16,7 +16,7 @@ public class Runner : MonoBehaviour {
 
     public Text scoreText;
     public Text timeText;
-    private float timeLeft = 60.0f;
+    private float timeLeft = 40.0f;
 
     // Use this for initialization
     void Start () {
@@ -101,7 +101,7 @@ public class Runner : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy")
         {
             Destroy(coll.gameObject);
-            score = score - 4;
+            score = score - 3;
         }
     }
 
