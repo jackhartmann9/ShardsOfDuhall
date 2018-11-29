@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Runner : MonoBehaviour {
 
@@ -10,6 +12,11 @@ public class Runner : MonoBehaviour {
     public GameObject pointPrefab;
     private int enemyLane = 0;
     private int pointLane = 0;
+    private int score = 0;
+
+    public Text scoreText;
+    public Text timeText;
+    private float timeLeft = 60.0f;
 
     // Use this for initialization
     void Start () {
@@ -20,6 +27,14 @@ public class Runner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        scoreText.text = "Score: " + score;
+        timeLeft -= Time.deltaTime;
+        timeText.text = "Time: " + (timeLeft).ToString("0");
+
+        if(timeLeft <= 0){
+            GameOver();
+        }
+
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y != 3)
         {
             transform.position = new Vector3(-5, transform.position.y +3, 0);
@@ -81,10 +96,19 @@ public class Runner : MonoBehaviour {
         if (coll.gameObject.tag == "Point")
         {
             Destroy(coll.gameObject);
+            score++;
         }
         if (coll.gameObject.tag == "Enemy")
         {
             Destroy(coll.gameObject);
+            score = score - 4;
         }
+    }
+
+    void GameOver()
+    {
+        PlayerPrefs.SetInt("Score", score);
+        Destroy(this);
+        SceneManager.LoadScene("MainMenu");
     }
 }
