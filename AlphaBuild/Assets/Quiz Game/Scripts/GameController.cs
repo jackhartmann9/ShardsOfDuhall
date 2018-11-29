@@ -90,16 +90,16 @@ public class GameController : MonoBehaviour {
             ShowQuestion();
         } else
         {
-            EndRound();
+            StartCoroutine(EndRound());
         }
     }
 
-    public void EndRound()
+    IEnumerator EndRound()
     {
         isRoundActive = false;
-
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);
+        yield return new WaitForSeconds(3);
         PlayerPrefs.SetInt("Score", playerScore);
         Destroy(this);
         SceneManager.LoadScene("MainMenu");
@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour {
         }
         if (timeLeft < 0.0f)
         {
-            EndRound();
+            StartCoroutine(EndRound());
         }
     }
 }
