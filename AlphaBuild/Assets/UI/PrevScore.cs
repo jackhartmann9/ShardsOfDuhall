@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class PrevScore : MonoBehaviour {
 	private int score;
 	public Text scoreText;
+    public Text nameText;
+    private string name; 
+
 	// Use this for initialization
 	void Start () {
 		score = 0;
@@ -23,6 +26,9 @@ public class PrevScore : MonoBehaviour {
 		score = PlayerPrefs.GetInt("Score");
 		scoreText.text = score.ToString();
 
-	  //Debug.Log("curr score = " + score);
-	}
+        name = PlayerPrefs.GetString("Name");
+        nameText.text = name;
+
+        //Debug.Log("curr score = " + score);
+    }
 }

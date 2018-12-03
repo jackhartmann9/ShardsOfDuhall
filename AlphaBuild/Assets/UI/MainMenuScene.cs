@@ -5,6 +5,7 @@ public class MainMenuScene : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("MainMenu");
+        PlayerPrefs.SetInt("Score", 0);
+        SceneManager.LoadScene("CharSelect");
     }
 }
