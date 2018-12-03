@@ -293,7 +293,7 @@ MonoBehaviour:
       answers:
       - answerText: Pacific
         isCorrect: 1
-      - answerText: Idian
+      - answerText: Indian
         isCorrect: 0
       - answerText: Atlantic
         isCorrect: 0

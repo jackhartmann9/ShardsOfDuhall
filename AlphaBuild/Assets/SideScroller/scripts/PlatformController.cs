@@ -23,7 +23,7 @@ public class PlatformController : MonoBehaviour {
     //Text pieces of the canvas to display score and Time
   	public Text scoreText;
     public Text timeText;
-    private float timeLeft = 60.0f;
+    private float timeLeft = 30.0f;
     //Grounded was to check for double jump mechanics
     private bool grounded = false;
     private Rigidbody2D rb2d;

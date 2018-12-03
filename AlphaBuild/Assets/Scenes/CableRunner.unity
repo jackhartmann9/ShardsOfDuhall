@@ -257,6 +257,50 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635657946}
   m_CullTransparentMesh: 0
+--- !u!1 &1046944114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046944116}
+  - component: {fileID: 1046944115}
+  m_Layer: 0
+  m_Name: Game Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1046944115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046944114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5b306809a314b3891e15751f1a9f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 1904630655830964, guid: 615c92b14847048d3b8ef5ef191f54a5,
+    type: 2}
+  pointPrefab: {fileID: 1749778606331566, guid: d9615781375c5491486fcae6513eb1a2,
+    type: 2}
+--- !u!4 &1046944116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046944114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3826988, y: 2.1576502, z: 0.13364735}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053330335
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,11 +396,19 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
+<<<<<<< HEAD
   m_audioClip: {fileID: 8300000, guid: 9e32cd79745224c109549b9755c2b740, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
+=======
+  m_audioClip: {fileID: 8300000, guid: 171b81e19f8654fcd91de731493c030e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+>>>>>>> Zach_Build
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -699,10 +751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upperLane: {x: -5, y: 3, z: 0}
-  obstaclePrefab: {fileID: 1904630655830964, guid: 615c92b14847048d3b8ef5ef191f54a5,
-    type: 2}
-  pointPrefab: {fileID: 1749778606331566, guid: d9615781375c5491486fcae6513eb1a2,
-    type: 2}
   scoreText: {fileID: 1591029393}
   timeText: {fileID: 635657948}
 --- !u!61 &1712561616
