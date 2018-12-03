@@ -13,7 +13,7 @@ public class Runner : MonoBehaviour {
 
     public Text scoreText;
     public Text timeText;
-    private float timeLeft = 40.0f;
+    private float timeLeft = 30.0f;
 
 	
 	// Update is called once per frame
