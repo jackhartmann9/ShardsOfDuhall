@@ -19,7 +19,6 @@ public class CategoryButton : MonoBehaviour
     {
         if (gameObject.CompareTag("Geography"))
         {
-            Debug.Log("Clicked on Geography");
             gameController.round = 0;
         }
         if (gameObject.CompareTag("Sports"))
@@ -34,7 +33,7 @@ public class CategoryButton : MonoBehaviour
         {
             gameController.round = 3;
         }
-        if (gameObject.CompareTag("Technology"))
+        if (gameObject.CompareTag("VideoGames"))
         {
             gameController.round = 4;
         }

@@ -106,7 +106,7 @@ public class GameController : MonoBehaviour {
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(.75f);
         ShowQuestion();
     }
 

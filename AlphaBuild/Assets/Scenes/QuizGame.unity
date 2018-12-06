@@ -438,7 +438,7 @@ RectTransform:
   - {fileID: 293856182}
   - {fileID: 85373993}
   m_Father: {fileID: 247155022}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02467108, y: 0.72129774}
   m_AnchorMax: {x: 0.98200005, y: 0.9324326}
@@ -569,10 +569,10 @@ RectTransform:
   - {fileID: 630278573}
   - {fileID: 912560889}
   - {fileID: 1876585892}
+  - {fileID: 223161609}
   - {fileID: 468185788}
   - {fileID: 2086029552}
   - {fileID: 333705266}
-  - {fileID: 223161609}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -595,8 +595,8 @@ GameObject:
   - component: {fileID: 293856184}
   - component: {fileID: 293856183}
   m_Layer: 5
-  m_Name: Technology
-  m_TagString: Technology
+  m_Name: VideoGames
+  m_TagString: VideoGames
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -828,7 +828,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 247155022}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02467108, y: 0.9355674}
   m_AnchorMax: {x: 0.32878074, y: 1}
@@ -904,7 +904,7 @@ RectTransform:
   m_Children:
   - {fileID: 2135004284}
   m_Father: {fileID: 247155022}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02467108, y: 0.72129774}
   m_AnchorMax: {x: 0.98200005, y: 0.9324326}
@@ -3043,7 +3043,7 @@ GameObject:
   - component: {fileID: 2043483901}
   - component: {fileID: 2043483900}
   m_Layer: 5
-  m_Name: TechnologyText
+  m_Name: VideoGamesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3138,7 +3138,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 247155022}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.82900006, y: 0.9355674}
   m_AnchorMax: {x: 0.98200005, y: 1}
