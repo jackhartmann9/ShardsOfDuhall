@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour {
     private AnswerData answerData;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
+    public GameObject categoryDisplay;
+    public int round;
 
     private bool isRoundActive;
     private float timeRemaining;
@@ -29,25 +31,29 @@ public class GameController : MonoBehaviour {
 
     private void Start()
     {
+        categoryDisplay.SetActive(true);
+        questionDisplay.SetActive(false);
 
         dataController = FindObjectOfType<DataController>();
-        RoundData currentRoundData = dataController.GetCurrentRoundData();
+        RoundData currentRoundData = dataController.GetCurrentRoundData(round);
 
         timeRemaining = currentRoundData.timeLimitInSeconds;
 
         playerScore = 0;
         questionIndex = 0;
 
-        ShowQuestion();
+        //ShowQuestion();
         isRoundActive = true;
 
     }
 
-    private void ShowQuestion()
+    public void ShowQuestion()
     {
-        RoundData currentRoundData = dataController.GetCurrentRoundData();
+        RoundData currentRoundData = dataController.GetCurrentRoundData(round);
         QuestionData[] questionPool = currentRoundData.questions;
         QuestionData questionData = questionPool[questionIndex];
+        categoryDisplay.SetActive(false);
+        questionDisplay.SetActive(true);
         questionText.text = questionData.questionText;
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -76,22 +82,32 @@ public class GameController : MonoBehaviour {
 
     public void AnswerButtonClicked(bool isCorrect)
     {
-        RoundData currentRoundData = dataController.GetCurrentRoundData();
+        RoundData currentRoundData = dataController.GetCurrentRoundData(round);
         QuestionData[] questionPool = currentRoundData.questions;
         if (isCorrect)
         {
             playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             scoreText.text = "Score: " + playerScore.ToString();
+            questionText.text = "Correct!";
+        } else
+        {
+            questionText.text = "Wrong!";
         }
 
         if (questionPool.Length > questionIndex + 1)
         {
+            StartCoroutine(Wait());
             questionIndex++;
-            ShowQuestion();
         } else
         {
             StartCoroutine(EndRound());
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5);
+        ShowQuestion();
     }
 
     IEnumerator EndRound()

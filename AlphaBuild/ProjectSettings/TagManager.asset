@@ -9,6 +9,12 @@ TagManager:
   - bullet
   - EndGame
   - Point
+  - Geography
+  - Sports
+  - Music
+  - History
+  - Technology
+  - General
   layers:
   - Default
   - TransparentFX

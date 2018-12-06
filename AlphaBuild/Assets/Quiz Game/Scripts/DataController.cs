@@ -13,9 +13,9 @@ public class DataController : MonoBehaviour {
         SceneManager.LoadScene("QuizGame");
 	}
 	
-    public RoundData GetCurrentRoundData()
+    public RoundData GetCurrentRoundData(int round)
     {
-        return allRoundData[0];
+        return allRoundData[round];
     }
 
 	// Update is called once per frame
