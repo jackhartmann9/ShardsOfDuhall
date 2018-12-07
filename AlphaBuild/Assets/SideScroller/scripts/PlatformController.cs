@@ -47,6 +47,11 @@ public class PlatformController : MonoBehaviour {
 
       //Modify the time to display correctly
       timeLeft -= Time.deltaTime;
+      if(timeLeft < 0){
+        PlayerPrefs.SetInt("Score", (int)score);
+          Destroy(this);
+          SceneManager.LoadScene("MainMenu");
+      }
       timeText.text = "Time: " + (timeLeft).ToString("0");
       //grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
