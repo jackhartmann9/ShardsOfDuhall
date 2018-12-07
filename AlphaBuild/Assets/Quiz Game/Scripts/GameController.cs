@@ -16,18 +16,18 @@ public class GameController : MonoBehaviour {
     [SerializeField] private AnswerButton[] answerButtons;
 
     private DataController dataController;
-    
+
     private AnswerData answerData;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
     public GameObject categoryDisplay;
     public int round;
+    public float timeLeft = 30.0f;
 
     private bool isRoundActive;
     private float timeRemaining;
     private int questionIndex;
     private int playerScore;
-    private float timeLeft = 30.0f;
 
     private void Start()
     {

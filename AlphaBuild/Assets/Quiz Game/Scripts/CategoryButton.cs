@@ -42,7 +42,7 @@ public class CategoryButton : MonoBehaviour
             gameController.round = 5;
         }
         gameController.ShowQuestion();
+        gameController.timeLeft = 30.0f;
 
     }
 }
-

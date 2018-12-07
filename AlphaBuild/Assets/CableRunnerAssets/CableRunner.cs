@@ -9,14 +9,14 @@ public class CableRunner : MonoBehaviour {
     public GameObject pointPrefab;
     private int enemyLane = 0;
     private int pointLane = 0;
-    
+
     // Use this for initialization
     void Start () {
         InvokeRepeating("SpawnEnemy", 1, 1);
-        InvokeRepeating("SpawnEnemy", 1, 3);
-        InvokeRepeating("SpawnPoint", 1, 2);
+        InvokeRepeating("SpawnEnemy", 1, 2);
+        InvokeRepeating("SpawnPoint", 1, 1);
     }
-	
+
 
     //Used by the enemy and the point prefabs to pick a lane to spawn in
     private int PickLane()
@@ -48,7 +48,7 @@ public class CableRunner : MonoBehaviour {
         }
         // Instantiate the obstacle at (x, y)
         GameObject instantiateObstacle = Instantiate(obstaclePrefab) as GameObject;
-        instantiateObstacle.transform.position = new Vector3(8, enemyLane, 1);
+        instantiateObstacle.transform.position = new Vector3(20, enemyLane, 20);
     }
 
     void SpawnPoint()
@@ -61,6 +61,6 @@ public class CableRunner : MonoBehaviour {
         }
         // Instantiate the obstacle at (x, y)
         GameObject instantiateObstacle = Instantiate(pointPrefab) as GameObject;
-        instantiateObstacle.transform.position = new Vector3(8, pointLane, 1);
+        instantiateObstacle.transform.position = new Vector3(20, pointLane, 20);
     }
 }

@@ -15,7 +15,7 @@ public class Runner : MonoBehaviour {
     public Text timeText;
     private float timeLeft = 30.0f;
 
-	
+
 	// Update is called once per frame
 	void Update () {
         scoreText.text = "Score: " + score;
@@ -26,12 +26,12 @@ public class Runner : MonoBehaviour {
             GameOver();
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y != 3)
+        if (Input.GetKeyDown("w") && transform.position.y != 3)
         {
             transform.position = new Vector3(-5, transform.position.y +3, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y != -3)
+        if (Input.GetKeyDown("s") && transform.position.y != -3)
         {
             transform.position = new Vector3(-5, transform.position.y -3, 0);
 

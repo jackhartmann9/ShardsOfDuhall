@@ -4,13 +4,14 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class PlatformController : MonoBehaviour {
 
-    private float score = 0f;
+    private int score = 0;
     private bool facingRight = true;
     //Start to not allow double jumping
     private bool jump = false;
@@ -18,6 +19,7 @@ public class PlatformController : MonoBehaviour {
     private float jumpForce = 1200f;
     //speed scales with time up to maxSpeed
     private float maxSpeed = 15f;
+    private float scoreMod = 10;
     bool isMovedLeft = false;
     bool isMovedRight = false;
     //Text pieces of the canvas to display score and Time
@@ -49,7 +51,7 @@ public class PlatformController : MonoBehaviour {
       //grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         float newSpeed = 9f + (60f - timeLeft) / 4f;
-        score = transform.position.x;
+        score = (int)(Math.Floor(transform.position.x/scoreMod));
         if(newSpeed > speed){
           speed = newSpeed;
         }
