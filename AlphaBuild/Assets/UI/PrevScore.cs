@@ -8,6 +8,7 @@ public class PrevScore : MonoBehaviour {
 	private int score;
 	public Text scoreText;
     public Text nameText;
+    public Text powerText;
     private string name; 
 
 	// Use this for initialization
@@ -28,6 +29,8 @@ public class PrevScore : MonoBehaviour {
 
         name = PlayerPrefs.GetString("Name");
         nameText.text = name;
+
+        powerText.text = PlayerPrefs.GetString("Power");
 
         //Debug.Log("curr score = " + score);
     }
