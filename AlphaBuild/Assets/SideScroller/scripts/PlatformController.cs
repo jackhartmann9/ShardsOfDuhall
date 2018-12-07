@@ -62,20 +62,20 @@ public class PlatformController : MonoBehaviour {
         }
 
         //set direction to left
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKey("a"))
         {
             isMovedLeft = true;
             isMovedRight = false;
         }
         //Set direction to right
-        else if (Input.GetKeyDown("d"))
+        else if (Input.GetKey("d"))
         {
             isMovedRight = true;
             isMovedLeft = false;
         } else
         {
-            //isMovedLeft = false;
-            //isMovedRight = false;
+            isMovedLeft = false;
+            isMovedRight = false;
         }
         if (isMovedRight)
         {

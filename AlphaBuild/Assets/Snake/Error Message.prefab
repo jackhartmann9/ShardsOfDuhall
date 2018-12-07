@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212857277735902594}
   - component: {fileID: 61132305690937578}
   m_Layer: 0
-  m_Name: Error Message Prefab
+  m_Name: Error Message
   m_TagString: AvoidThis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
