@@ -15,6 +15,9 @@ TagManager:
   - History
   - General
   - VideoGames
+  - Bad
+  - AvoidThis
+  - Food
   layers:
   - Default
   - TransparentFX

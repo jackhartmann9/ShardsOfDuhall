@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Snake : MonoBehaviour {
-    private int score = 0;
-	bool ate = false;
-	private float speed = 0.02f;
+  private int score = 0;
+	private bool ate = false;
+	private float speed = 0.03f;
 	public Text scoreText;
-    public Text timeText;
-    private float timeLeft = 30.0f;
+  public Text timeText;
+  private float timeLeft = 30.0f;
 	public GameObject tailPrefab;
     Vector2 dir = Vector2.right;
 	List<Transform> tail = new List<Transform>();
@@ -31,6 +31,7 @@ public class Snake : MonoBehaviour {
           EndGame();
         }
         timeText.text = (timeLeft).ToString("0");
+        UpdateSpeed(timeLeft);
     // Move in a new Direction
 	    if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
 	        dir = Vector2.right;
@@ -42,6 +43,10 @@ public class Snake : MonoBehaviour {
 	        dir = Vector2.up;
 	}
 
+   private void UpdateSpeed(float timeLeft){
+     float time = 30.0f - timeLeft;
+     speed += time/15f * 0.05f;
+   }
    void Move() {
     Vector2 v = transform.position;
 
@@ -82,9 +87,14 @@ public class Snake : MonoBehaviour {
 
 void OnTriggerEnter2D(Collider2D coll) {
         // Food?
-        if (coll.name.StartsWith("FoodPrefab")) {
+        if (coll.gameObject.tag == "Food") {
             ate = true;
             Destroy(coll.gameObject);
+        }
+        if (coll.gameObject.tag == "AvoidThis") {
+            score -= 3;
+            Destroy(coll.gameObject);
+            scoreText.text = score.ToString();
         }
 
         if (coll.gameObject.tag == "EndGame") {
