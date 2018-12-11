@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23282312090900788}
   - component: {fileID: 65879770472496420}
   m_Layer: 9
-  m_Name: FireWall 1
+  m_Name: FireWall 1_1
   m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
