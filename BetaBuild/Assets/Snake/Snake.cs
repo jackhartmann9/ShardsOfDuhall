@@ -10,12 +10,12 @@ public class Snake : MonoBehaviour {
   private int score = 0;
 	private bool ate = false;
 	private float speed = 0.03f;
-	public Text scoreText;
-  public Text timeText;
-  public GameObject roundEndDisplay;
+	[SerializeField] private Text scoreText;
+  [SerializeField] private Text timeText;
+  [SerializeField] private GameObject roundEndDisplay;
   private float timeLeft = 30.0f;
-	public GameObject tailPrefab;
-    Vector2 dir = Vector2.right;
+	[SerializeField] private GameObject tailPrefab;
+  Vector2 dir = Vector2.right;
 	List<Transform> tail = new List<Transform>();
 
 
@@ -33,58 +33,51 @@ public class Snake : MonoBehaviour {
         }
         timeText.text = (timeLeft).ToString("0");
         UpdateSpeed(timeLeft);
-    // Move in a new Direction
-	    if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
-	        dir = Vector2.right;
-	    else if (Input.GetKeyDown("s")|| Input.GetKeyDown("down"))
-	        dir = -Vector2.up;
-	    else if (Input.GetKeyDown("a")|| Input.GetKeyDown("left"))
-	        dir = -Vector2.right;
-	    else if (Input.GetKeyDown("w")|| Input.GetKeyDown("up"))
-	        dir = Vector2.up;
 	}
 
    private void UpdateSpeed(float timeLeft){
      float time = 30.0f - timeLeft;
      speed += time/15f * 0.05f;
    }
+
+   //Delegate Handling from Input Handler and Move Control
+   public void MoveUp(){dir = Vector2.up;}
+   public void MoveDown(){dir = -Vector2.up;}
+   public void MoveLeft(){dir = -Vector2.right;}
+   public void MoveRight(){dir = Vector2.right;}
+
    void Move() {
-    Vector2 v = transform.position;
+      Vector2 v = transform.position;
 
-    transform.Translate(dir);
+      transform.Translate(dir);
 
-    if (ate) {
-        score++;
-        scoreText.text = score.ToString();
+      if (ate) {
+          score++;
+          scoreText.text = score.ToString();
+          AddTail(3);
+          ate = false;
+          speed = speed * .7f;
+      }
+      else if (tail.Count > 0) {
+          // Move last Tail Element to where the Head was
+          tail.Last().position = v;
+
+          // Add to front of list, remove from the back
+          tail.Insert(0, tail.Last());
+          tail.RemoveAt(tail.Count-1);
+      }
+    }
+
+    private void AddTail(int numTails){
+      Vector2 v = transform.position;
+      transform.Translate(dir);
+      for(int i = 0; i < numTails; i++){
         GameObject g =(GameObject)Instantiate(tailPrefab,
                                               v,
                                               Quaternion.identity);
-
         tail.Insert(0, g.transform);
-
-        GameObject g1 =(GameObject)Instantiate(tailPrefab,
-                                              v,
-                                              Quaternion.identity);
-
-
-        tail.Insert(0, g1.transform);
-        GameObject g2 =(GameObject)Instantiate(tailPrefab,
-                                              v,
-                                              Quaternion.identity);
-
-        tail.Insert(0, g2.transform);
-        ate = false;
-        speed = speed * .7f;
+      }
     }
-    else if (tail.Count > 0) {
-        // Move last Tail Element to where the Head was
-        tail.Last().position = v;
-
-        // Add to front of list, remove from the back
-        tail.Insert(0, tail.Last());
-        tail.RemoveAt(tail.Count-1);
-    }
-}
 
 void OnTriggerEnter2D(Collider2D coll) {
         // Food?
