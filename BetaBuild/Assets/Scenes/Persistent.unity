@@ -1,0 +1,1398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &235573372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235573373}
+  - component: {fileID: 235573374}
+  m_Layer: 0
+  m_Name: DataController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235573373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235573372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &235573374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235573372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1a0b1c9eaa14842862e0b947c625f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRoundData:
+  - name: Geography
+    timeLimitInSeconds: 30
+    pointsAddedForCorrectAnswer: 1
+    questions:
+    - questionText: What is the Capital of New Hampshire?
+      answers:
+      - answerText: Manchester
+        isCorrect: 0
+      - answerText: Portsmouth
+        isCorrect: 0
+      - answerText: Nashua
+        isCorrect: 0
+      - answerText: Concord
+        isCorrect: 1
+    - questionText: The Galapagos Islands form part of which South American country?
+      answers:
+      - answerText: Chile
+        isCorrect: 0
+      - answerText: Ecuador
+        isCorrect: 1
+      - answerText: Peru
+        isCorrect: 0
+      - answerText: Colombia
+        isCorrect: 0
+    - questionText: The flag of which country is the only non-rectangular national
+        flag?
+      answers:
+      - answerText: Switzerland
+        isCorrect: 0
+      - answerText: Nepal
+        isCorrect: 1
+      - answerText: Vatican City
+        isCorrect: 0
+      - answerText: Bhutan
+        isCorrect: 0
+    - questionText: Which city's famous nickname is the 'Pearl of the Orient'?
+      answers:
+      - answerText: Singapore
+        isCorrect: 0
+      - answerText: Taipei
+        isCorrect: 0
+      - answerText: Kyoto
+        isCorrect: 0
+      - answerText: Hong Kong
+        isCorrect: 1
+    - questionText: Which of the following countries does NOT have a population exceeding
+        200 million? (2018)
+      answers:
+      - answerText: Nigeria
+        isCorrect: 1
+      - answerText: Brazil
+        isCorrect: 0
+      - answerText: Pakistan
+        isCorrect: 0
+      - answerText: Indonesia
+        isCorrect: 0
+    - questionText: Which Scottish lake contains more water than all of the lakes
+        and rivers of England and Wales combined?
+      answers:
+      - answerText: Loch Tay
+        isCorrect: 0
+      - answerText: Loch Lomond
+        isCorrect: 0
+      - answerText: Loch Morar
+        isCorrect: 0
+      - answerText: Loch Ness
+        isCorrect: 1
+    - questionText: Which is the world's smallest continent (by area)?
+      answers:
+      - answerText: Oceania
+        isCorrect: 1
+      - answerText: Europe
+        isCorrect: 0
+      - answerText: South America
+        isCorrect: 0
+      - answerText: Antarctica
+        isCorrect: 0
+    - questionText: What is the longest mountain range in the world?
+      answers:
+      - answerText: Rockies
+        isCorrect: 0
+      - answerText: Himalayas
+        isCorrect: 0
+      - answerText: Andes
+        isCorrect: 1
+      - answerText: Transantarctics
+        isCorrect: 0
+    - questionText: To the nearest thousand miles, what is the circumference of the
+        world at the equator?
+      answers:
+      - answerText: 10000
+        isCorrect: 0
+      - answerText: 25000
+        isCorrect: 1
+      - answerText: 100000
+        isCorrect: 0
+      - answerText: 150000
+        isCorrect: 0
+    - questionText: "Which of the following countries is NOT a member state of the
+        European Union?\t"
+      answers:
+      - answerText: Sweden
+        isCorrect: 0
+      - answerText: 'Norway '
+        isCorrect: 1
+      - answerText: Denmark
+        isCorrect: 0
+      - answerText: Finland
+        isCorrect: 0
+    - questionText: What is the body of water that borders Green, Turkey and Southern
+        Italy?
+      answers:
+      - answerText: Red Sea
+        isCorrect: 0
+      - answerText: Mediterranean Sea
+        isCorrect: 0
+      - answerText: Agean Sea
+        isCorrect: 1
+      - answerText: Black Sea
+        isCorrect: 0
+    - questionText: Which European country was reunified in 1990?
+      answers:
+      - answerText: Austria
+        isCorrect: 0
+      - answerText: Ukraine
+        isCorrect: 0
+      - answerText: Switzerland
+        isCorrect: 0
+      - answerText: Germany
+        isCorrect: 1
+    - questionText: What is the formal language of Libya?
+      answers:
+      - answerText: English
+        isCorrect: 0
+      - answerText: French
+        isCorrect: 0
+      - answerText: Arabic
+        isCorrect: 1
+      - answerText: Dutch
+        isCorrect: 0
+    - questionText: The currents of which Ocean create the El Nino effect?
+      answers:
+      - answerText: Pacific
+        isCorrect: 1
+      - answerText: Indian
+        isCorrect: 0
+      - answerText: Atlantic
+        isCorrect: 0
+      - answerText: Arctic
+        isCorrect: 0
+    - questionText: In which Canadian province is Montreal located?
+      answers:
+      - answerText: Vancouver
+        isCorrect: 0
+      - answerText: Ontario
+        isCorrect: 0
+      - answerText: Quebec
+        isCorrect: 1
+      - answerText: Nova Scotia
+        isCorrect: 0
+    - questionText: Which of the following is NOT one of the 'four corners' states?
+      answers:
+      - answerText: Nevada
+        isCorrect: 1
+      - answerText: Arizona
+        isCorrect: 0
+      - answerText: New Mexico
+        isCorrect: 0
+      - answerText: Utah
+        isCorrect: 0
+    - questionText: How many states start with the letter A in the USA?
+      answers:
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 7
+        isCorrect: 0
+    - questionText: What is the currency of Sweden?
+      answers:
+      - answerText: Euro
+        isCorrect: 0
+      - answerText: Krona
+        isCorrect: 1
+      - answerText: Franc
+        isCorrect: 0
+      - answerText: Pound
+        isCorrect: 0
+    - questionText: How many countries are in South America?
+      answers:
+      - answerText: 20
+        isCorrect: 0
+      - answerText: 18
+        isCorrect: 0
+      - answerText: 15
+        isCorrect: 1
+      - answerText: 12
+        isCorrect: 0
+    - questionText: How many islands is Japan made up of?
+      answers:
+      - answerText: 852
+        isCorrect: 0
+      - answerText: 3,852
+        isCorrect: 0
+      - answerText: 6,852
+        isCorrect: 1
+      - answerText: 9,852
+        isCorrect: 0
+  - name: Sports
+    timeLimitInSeconds: 30
+    pointsAddedForCorrectAnswer: 1
+    questions:
+    - questionText: Who won Super Bowl 48?
+      answers:
+      - answerText: Patriots
+        isCorrect: 0
+      - answerText: Eagles
+        isCorrect: 0
+      - answerText: Seahawks
+        isCorrect: 1
+      - answerText: Chiefs
+        isCorrect: 0
+    - questionText: How many bases are there in baseball
+      answers:
+      - answerText: 4
+        isCorrect: 0
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 3
+        isCorrect: 1
+      - answerText: 1
+        isCorrect: 0
+    - questionText: What is the diameter of a basketball hoop
+      answers:
+      - answerText: 18in
+        isCorrect: 1
+      - answerText: 16in
+        isCorrect: 0
+      - answerText: 20in
+        isCorrect: 0
+      - answerText: 22in
+        isCorrect: 0
+    - questionText: Who is the only NASCAR driver to ever win 200 races?
+      answers:
+      - answerText: Dale Earnhardt
+        isCorrect: 0
+      - answerText: Richard Petty
+        isCorrect: 1
+      - answerText: Jimmie Johnson
+        isCorrect: 0
+      - answerText: Jeff Gordon
+        isCorrect: 0
+    - questionText: How many times has Germany won the World Cup?
+      answers:
+      - answerText: 2
+        isCorrect: 0
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+      - answerText: 5
+        isCorrect: 0
+    - questionText: Which player has scored the most goals in Premier League history
+        with 260?
+      answers:
+      - answerText: Alan Shearer
+        isCorrect: 1
+      - answerText: Wayne Rooney
+        isCorrect: 0
+      - answerText: Thierry Henry
+        isCorrect: 0
+      - answerText: Cristiano Ronaldo
+        isCorrect: 0
+    - questionText: Who was the first person inducted into the WWE Hall of Fame?
+      answers:
+      - answerText: Hulk Hogan
+        isCorrect: 0
+      - answerText: Randy Savage
+        isCorrect: 0
+      - answerText: Vince McMahon
+        isCorrect: 0
+      - answerText: Andre the Giant
+        isCorrect: 1
+    - questionText: What is the official term for delivering the ball to the batsman
+        in cricket?
+      answers:
+      - answerText: Pitching
+        isCorrect: 0
+      - answerText: Bowling
+        isCorrect: 1
+      - answerText: Flinging
+        isCorrect: 0
+      - answerText: Hurling
+        isCorrect: 0
+    - questionText: Pete Sampras never won which of the Grand Slam tournaments?
+      answers:
+      - answerText: French Open
+        isCorrect: 1
+      - answerText: Australian Open
+        isCorrect: 0
+      - answerText: Wimbledon
+        isCorrect: 0
+      - answerText: US Open
+        isCorrect: 0
+    - questionText: "Which of these teams has never won a NBA championship?\t"
+      answers:
+      - answerText: Knicks
+        isCorrect: 0
+      - answerText: Bucks
+        isCorrect: 0
+      - answerText: Pacers
+        isCorrect: 1
+      - answerText: Rockets
+        isCorrect: 0
+    - questionText: Which school holds the record for most consecutive NCAA Men's
+        Basketball titles won with 7?
+      answers:
+      - answerText: North Carolina
+        isCorrect: 0
+      - answerText: Duke
+        isCorrect: 0
+      - answerText: Kentucky
+        isCorrect: 0
+      - answerText: UCLA
+        isCorrect: 1
+    - questionText: Which country has won the most Rugby Union World Cups?
+      answers:
+      - answerText: England
+        isCorrect: 0
+      - answerText: Australia
+        isCorrect: 0
+      - answerText: Spain
+        isCorrect: 0
+      - answerText: New Zealand
+        isCorrect: 1
+    - questionText: Which position in baseball is marked as '1' on an official scorecard?
+      answers:
+      - answerText: First Base
+        isCorrect: 0
+      - answerText: Pitcher
+        isCorrect: 1
+      - answerText: Catcher
+        isCorrect: 0
+      - answerText: Coach
+        isCorrect: 0
+    - questionText: Which MLB player holds the record for most consecutive games played?
+      answers:
+      - answerText: Cal Ripken Jr.
+        isCorrect: 1
+      - answerText: Lou Gehrig
+        isCorrect: 0
+      - answerText: Babe Ruth
+        isCorrect: 0
+      - answerText: Barry Bonds
+        isCorrect: 0
+    - questionText: "What jersey number did Wayne Gretzky wear?\t"
+      answers:
+      - answerText: 9
+        isCorrect: 0
+      - answerText: 27
+        isCorrect: 0
+      - answerText: 99
+        isCorrect: 1
+      - answerText: 33
+        isCorrect: 0
+    - questionText: What color jacket is given to the winner of the Masters Tournament?
+      answers:
+      - answerText: Gold
+        isCorrect: 0
+      - answerText: Green
+        isCorrect: 1
+      - answerText: Black
+        isCorrect: 0
+      - answerText: Brown
+        isCorrect: 0
+    - questionText: Which of these horses did NOT win the triple crown?
+      answers:
+      - answerText: Man o' War
+        isCorrect: 1
+      - answerText: Secretariat
+        isCorrect: 0
+      - answerText: Affirmed
+        isCorrect: 0
+      - answerText: Citation
+        isCorrect: 0
+    - questionText: Which country won the first World Cup in 1930?
+      answers:
+      - answerText: Brazil
+        isCorrect: 0
+      - answerText: Uruguay
+        isCorrect: 1
+      - answerText: Spain
+        isCorrect: 0
+      - answerText: France
+        isCorrect: 0
+    - questionText: Which of these cities is well known for holding an automobile
+        race every year around Memorial Day?
+      answers:
+      - answerText: Austin
+        isCorrect: 0
+      - answerText: Los Angeles
+        isCorrect: 0
+      - answerText: Indianapolis
+        isCorrect: 1
+      - answerText: Daytona
+        isCorrect: 0
+    - questionText: How many championships are there in the Men's Singles Grand Slam?
+      answers:
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+      - answerText: '5 '
+        isCorrect: 0
+      - answerText: 6
+        isCorrect: 0
+  - name: Music
+    timeLimitInSeconds: 30
+    pointsAddedForCorrectAnswer: 1
+    questions:
+    - questionText: What is a collection of musical notes played at once?
+      answers:
+      - answerText: Chord
+        isCorrect: 1
+      - answerText: Harmony
+        isCorrect: 0
+      - answerText: String
+        isCorrect: 0
+      - answerText: Band
+        isCorrect: 0
+    - questionText: "Which Taylor Swift song did not hit #1 on the Billboard Hot 100?\t"
+      answers:
+      - answerText: Blank Space
+        isCorrect: 0
+      - answerText: Bad Blood
+        isCorrect: 0
+      - answerText: You Belong with me
+        isCorrect: 1
+      - answerText: Shake It Off
+        isCorrect: 0
+    - questionText: 'Complete the missing lyric: ''Is this the real life? Is this
+        just _____?'''
+      answers:
+      - answerText: fantasy
+        isCorrect: 1
+      - answerText: imagination
+        isCorrect: 0
+      - answerText: delusion
+        isCorrect: 0
+      - answerText: destiny
+        isCorrect: 0
+    - questionText: Eddie Van Halen, Eric Clapton, and Jimmy Page all use what instrument?
+      answers:
+      - answerText: Drums
+        isCorrect: 0
+      - answerText: Keyboards
+        isCorrect: 0
+      - answerText: Guitar
+        isCorrect: 1
+      - answerText: Bass
+        isCorrect: 0
+    - questionText: "What song features the lyrics 'we don't need no education'?\t"
+      answers:
+      - answerText: School's Out
+        isCorrect: 0
+      - answerText: Another Brick in the Wall
+        isCorrect: 1
+      - answerText: Hot for Teacher
+        isCorrect: 0
+      - answerText: Yellow Submarine
+        isCorrect: 0
+    - questionText: Which Michael Jackson album featured the single, 'Beat It'?
+      answers:
+      - answerText: Dangerous
+        isCorrect: 0
+      - answerText: Bad
+        isCorrect: 0
+      - answerText: Invincible
+        isCorrect: 0
+      - answerText: Thriller
+        isCorrect: 1
+    - questionText: "Which composer is known for the piece 'The Four Seasons'?\t"
+      answers:
+      - answerText: Antonio Vivaldi
+        isCorrect: 1
+      - answerText: Beethoven
+        isCorrect: 0
+      - answerText: George Frideric Handel
+        isCorrect: 0
+      - answerText: Mozart
+        isCorrect: 0
+    - questionText: Which of these songs was written by the band Aerosmith?
+      answers:
+      - answerText: Whole Lotta Love
+        isCorrect: 0
+      - answerText: Runnin' With the Devil
+        isCorrect: 0
+      - answerText: Sweet Emotion
+        isCorrect: 1
+      - answerText: Detroit Rock City
+        isCorrect: 0
+    - questionText: "Which '90s rapper performed the song 'Gangsta's Paradise'?\t"
+      answers:
+      - answerText: Notorious B.I.G.
+        isCorrect: 0
+      - answerText: Snoop Dogg
+        isCorrect: 0
+      - answerText: Coolio
+        isCorrect: 1
+      - answerText: Vanilla Ice
+        isCorrect: 0
+    - questionText: "Which of these bands did NOT originate from the United Kingdom?\t"
+      answers:
+      - answerText: Pink Floyd
+        isCorrect: 0
+      - answerText: Black Sabbath
+        isCorrect: 0
+      - answerText: The Doors
+        isCorrect: 1
+      - answerText: Queen
+        isCorrect: 0
+    - questionText: "Which Bealtes album features the song 'Come Together'?\t"
+      answers:
+      - answerText: Help!
+        isCorrect: 0
+      - answerText: Revolver
+        isCorrect: 0
+      - answerText: Abbey Road
+        isCorrect: 1
+      - answerText: Rubber Soul
+        isCorrect: 0
+    - questionText: "Which of these well-known bands never had a #1 hit in the U.S.?\t"
+      answers:
+      - answerText: Eagles
+        isCorrect: 0
+      - answerText: The Rolling Stones
+        isCorrect: 0
+      - answerText: Fleetwood Mac
+        isCorrect: 0
+      - answerText: Led Zeppelin
+        isCorrect: 1
+    - questionText: "Who won the 2015 Grammy Award for Record of the Year?\t"
+      answers:
+      - answerText: Sam Smith
+        isCorrect: 1
+      - answerText: Meghan Trainor
+        isCorrect: 0
+      - answerText: Taylor Swift
+        isCorrect: 0
+      - answerText: Sia
+        isCorrect: 0
+    - questionText: "Which of these rock bands was first to debut an album?\t"
+      answers:
+      - answerText: Pink Floyd
+        isCorrect: 1
+      - answerText: Led Zeppelin
+        isCorrect: 0
+      - answerText: Aerosmith
+        isCorrect: 0
+      - answerText: Queen
+        isCorrect: 0
+    - questionText: Which classical composer compiled 'Swan Lake'?
+      answers:
+      - answerText: Mozart
+        isCorrect: 0
+      - answerText: Bach
+        isCorrect: 0
+      - answerText: Tchaikovsky
+        isCorrect: 1
+      - answerText: Rachmaninoff
+        isCorrect: 0
+    - questionText: Which Beatle was NOT an original member of the band?
+      answers:
+      - answerText: Paul McCartney
+        isCorrect: 0
+      - answerText: Ringo Starr
+        isCorrect: 1
+      - answerText: George Harrison
+        isCorrect: 0
+      - answerText: John Lennon
+        isCorrect: 0
+    - questionText: Which of these Michael Jackson songs was released first?
+      answers:
+      - answerText: Billie Jean
+        isCorrect: 0
+      - answerText: Ben
+        isCorrect: 1
+      - answerText: Beat It
+        isCorrect: 0
+      - answerText: Bad
+        isCorrect: 0
+    - questionText: "What color is also the name of a Taylor Swift album?\t"
+      answers:
+      - answerText: Orange
+        isCorrect: 0
+      - answerText: Red
+        isCorrect: 1
+      - answerText: Yellow
+        isCorrect: 0
+      - answerText: Blue
+        isCorrect: 0
+    - questionText: Which artist compiled the best-selling Greatest Hits album of
+        all time?
+      answers:
+      - answerText: Beatles
+        isCorrect: 0
+      - answerText: Queen
+        isCorrect: 0
+      - answerText: Eagles
+        isCorrect: 1
+      - answerText: Madonna
+        isCorrect: 0
+    - questionText: How many strings are on Ukulele
+      answers:
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 6
+        isCorrect: 0
+  - name: History
+    timeLimitInSeconds: 30
+    pointsAddedForCorrectAnswer: 1
+    questions:
+    - questionText: How many years was George Washington in School
+      answers:
+      - answerText: 8
+        isCorrect: 0
+      - answerText: 11
+        isCorrect: 1
+      - answerText: 14
+        isCorrect: 0
+      - answerText: 23
+        isCorrect: 0
+    - questionText: What illness/disease did Joseph Stalin have as a kid
+      answers:
+      - answerText: Small Pox
+        isCorrect: 1
+      - answerText: Chicken Pox
+        isCorrect: 0
+      - answerText: Cancer
+        isCorrect: 0
+      - answerText: Tuberculosus
+        isCorrect: 0
+    - questionText: Who added Vowels to the Phoenician alphabet
+      answers:
+      - answerText: Egyptians
+        isCorrect: 0
+      - answerText: English
+        isCorrect: 0
+      - answerText: Chinese
+        isCorrect: 0
+      - answerText: Greeks
+        isCorrect: 1
+    - questionText: How many Ice Ages have there been
+      answers:
+      - answerText: 7
+        isCorrect: 0
+      - answerText: 2
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+      - answerText: 13
+        isCorrect: 0
+    - questionText: Who served as US President and Vice President without being elected
+        to either.
+      answers:
+      - answerText: George Washington
+        isCorrect: 0
+      - answerText: Harry Truman
+        isCorrect: 0
+      - answerText: George W. Bush
+        isCorrect: 0
+      - answerText: Gerald Ford
+        isCorrect: 1
+    - questionText: Who was the longest serving non-royal leader in the last 100 years?
+      answers:
+      - answerText: Muammar Gaddafi
+        isCorrect: 0
+      - answerText: 'Fidel Castro '
+        isCorrect: 1
+      - answerText: Francisco Franco
+        isCorrect: 0
+      - answerText: Bill Clinton
+        isCorrect: 0
+    - questionText: What political ideology did Friedrich Engels advocate fore?
+      answers:
+      - answerText: Communism
+        isCorrect: 1
+      - answerText: Liberalism
+        isCorrect: 0
+      - answerText: Fascism
+        isCorrect: 0
+      - answerText: Conservatism
+        isCorrect: 0
+    - questionText: What of the following has never been and independent sovereign
+        state?
+      answers:
+      - answerText: Tibet
+        isCorrect: 0
+      - answerText: Scotland
+        isCorrect: 0
+      - answerText: Faroe Islands
+        isCorrect: 1
+      - answerText: Hawaii
+        isCorrect: 0
+    - questionText: How many men have walked on the moon?
+      answers:
+      - answerText: 10
+        isCorrect: 0
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 12
+        isCorrect: 1
+      - answerText: 9
+        isCorrect: 0
+    - questionText: The "Great Norther War" was between which 2 countries?
+      answers:
+      - answerText: England and Scotland
+        isCorrect: 0
+      - answerText: England and Ukraine
+        isCorrect: 0
+      - answerText: Russia and Sweden
+        isCorrect: 1
+      - answerText: Canada and Denmark
+        isCorrect: 0
+    - questionText: What year did Christopher Columbus arrive in the Americas
+      answers:
+      - answerText: 1522
+        isCorrect: 0
+      - answerText: 1432
+        isCorrect: 0
+      - answerText: 1492
+        isCorrect: 1
+      - answerText: 1462
+        isCorrect: 0
+    - questionText: Who wrote "Long Walk to Freedom"
+      answers:
+      - answerText: Thomas Jefferson
+        isCorrect: 0
+      - answerText: Nelson Mandela
+        isCorrect: 1
+      - answerText: Mahatma Gandhi
+        isCorrect: 0
+      - answerText: Theodore Roosevelt
+        isCorrect: 0
+    - questionText: What year was gunpowder invented
+      answers:
+      - answerText: 1280
+        isCorrect: 1
+      - answerText: 1400
+        isCorrect: 0
+      - answerText: 1421
+        isCorrect: 0
+      - answerText: 1462
+        isCorrect: 0
+    - questionText: What war occured in the United States in the early 1860s
+      answers:
+      - answerText: WWI
+        isCorrect: 0
+      - answerText: WWII
+        isCorrect: 0
+      - answerText: Civil War
+        isCorrect: 1
+      - answerText: The War of 1862
+        isCorrect: 0
+    - questionText: The Modern Republic of ________ was established in 1912
+      answers:
+      - answerText: Canada
+        isCorrect: 0
+      - answerText: China
+        isCorrect: 1
+      - answerText: Russia
+        isCorrect: 0
+      - answerText: Finland
+        isCorrect: 0
+    - questionText: Tigris and Euphrates are associated with...
+      answers:
+      - answerText: China
+        isCorrect: 0
+      - answerText: Russia
+        isCorrect: 0
+      - answerText: Brazil
+        isCorrect: 0
+      - answerText: Mesopatamia
+        isCorrect: 1
+    - questionText: When was the first Olympic games
+      answers:
+      - answerText: 400 BC
+        isCorrect: 0
+      - answerText: 603 BC
+        isCorrect: 0
+      - answerText: 721 BC
+        isCorrect: 0
+      - answerText: 776 BC
+        isCorrect: 1
+    - questionText: Buckinham Place became the official royal residence during the
+        reign of which Brisih monarch
+      answers:
+      - answerText: King George II
+        isCorrect: 0
+      - answerText: Queen Elizabeth
+        isCorrect: 0
+      - answerText: Queen Victoria
+        isCorrect: 1
+      - answerText: King Phillip III
+        isCorrect: 0
+    - questionText: Who shot Alexander Hamilton
+      answers:
+      - answerText: Aaron Burr
+        isCorrect: 1
+      - answerText: Thomas Jefferson
+        isCorrect: 0
+      - answerText: Jim Smith
+        isCorrect: 0
+      - answerText: George Washington
+        isCorrect: 0
+    - questionText: What year was Harvard Founded
+      answers:
+      - answerText: 1621
+        isCorrect: 0
+      - answerText: 1636
+        isCorrect: 1
+      - answerText: 1724
+        isCorrect: 0
+      - answerText: 1793
+        isCorrect: 0
+  - name: Video Games
+    timeLimitInSeconds: 30
+    pointsAddedForCorrectAnswer: 1
+    questions:
+    - questionText: Who is Mario's Brother
+      answers:
+      - answerText: Wario
+        isCorrect: 0
+      - answerText: Bullet Bill
+        isCorrect: 0
+      - answerText: Luigi
+        isCorrect: 1
+      - answerText: Toad
+        isCorrect: 0
+    - questionText: Who is Sonic's sidekick?
+      answers:
+      - answerText: Mario
+        isCorrect: 0
+      - answerText: Knuckles
+        isCorrect: 0
+      - answerText: Jimmy
+        isCorrect: 0
+      - answerText: Tails
+        isCorrect: 1
+    - questionText: What gamin Console is made by Microsoft
+      answers:
+      - answerText: Playstation
+        isCorrect: 0
+      - answerText: Game Cube
+        isCorrect: 0
+      - answerText: Wii
+        isCorrect: 0
+      - answerText: X-box
+        isCorrect: 1
+    - questionText: What is the name of Nintendo's 16 bit console
+      answers:
+      - answerText: NES
+        isCorrect: 0
+      - answerText: SNES
+        isCorrect: 1
+      - answerText: N64
+        isCorrect: 0
+      - answerText: Wii
+        isCorrect: 0
+    - questionText: Who is the main character in the Tomb Raider series?
+      answers:
+      - answerText: Georgia Reed
+        isCorrect: 0
+      - answerText: Lily Iris
+        isCorrect: 0
+      - answerText: Laura Croft
+        isCorrect: 1
+      - answerText: Zelda Link
+        isCorrect: 0
+    - questionText: Black Ops is part of what game collection?
+      answers:
+      - answerText: Halo
+        isCorrect: 0
+      - answerText: Pac-Man
+        isCorrect: 0
+      - answerText: Call of Duty
+        isCorrect: 1
+      - answerText: Ghost Recon
+        isCorrect: 0
+    - questionText: What character eates pellets, fruits, and ghosts?
+      answers:
+      - answerText: Bowser
+        isCorrect: 1
+      - answerText: Zelda
+        isCorrect: 0
+      - answerText: Pac-Man
+        isCorrect: 0
+      - answerText: Tom Clancy
+        isCorrect: 0
+    - questionText: Who is Mega Man's sister?
+      answers:
+      - answerText: Rock
+        isCorrect: 0
+      - answerText: Roll
+        isCorrect: 1
+      - answerText: 'Shake '
+        isCorrect: 0
+      - answerText: Tumble
+        isCorrect: 0
+    - questionText: Whatgame is called "Pocket Monsters" in Japan
+      answers:
+      - answerText: Pokemon
+        isCorrect: 1
+      - answerText: Call of Duty
+        isCorrect: 0
+      - answerText: World of Warcraft
+        isCorrect: 0
+      - answerText: Tetris
+        isCorrect: 0
+    - questionText: Who is the protagonist in the Metroid series
+      answers:
+      - answerText: Mario
+        isCorrect: 0
+      - answerText: Fox
+        isCorrect: 0
+      - answerText: Samus
+        isCorrect: 1
+      - answerText: Optimus Prime
+        isCorrect: 0
+    - questionText: What is the name of Nintendo's 1st mobile gaming platform
+      answers:
+      - answerText: NES Mobile
+        isCorrect: 0
+      - answerText: Game-on-the-go
+        isCorrect: 0
+      - answerText: Wii Mobile
+        isCorrect: 0
+      - answerText: Game Body
+        isCorrect: 1
+    - questionText: What video game does "Faker" play competitively
+      answers:
+      - answerText: Call of Duty
+        isCorrect: 0
+      - answerText: Halo
+        isCorrect: 0
+      - answerText: League of Legends
+        isCorrect: 1
+      - answerText: Minecraft
+        isCorrect: 0
+    - questionText: What is the popular MMO made by BLizzard with Orcs, Elves, and
+        Gnomes?
+      answers:
+      - answerText: Dota
+        isCorrect: 0
+      - answerText: Diablo
+        isCorrect: 0
+      - answerText: World of Warcraft
+        isCorrect: 1
+      - answerText: Odyssey
+        isCorrect: 0
+    - questionText: What is the name of the most Recent Fallout game
+      answers:
+      - answerText: Fallout 3
+        isCorrect: 0
+      - answerText: Fallout New World
+        isCorrect: 0
+      - answerText: Fallout Renewed
+        isCorrect: 0
+      - answerText: Fallout 76
+        isCorrect: 1
+    - questionText: What champion in League of Legends has a flaming teddy bear?
+      answers:
+      - answerText: Ivern
+        isCorrect: 0
+      - answerText: Annie
+        isCorrect: 1
+      - answerText: Fizz
+        isCorrect: 0
+      - answerText: Brand
+        isCorrect: 0
+    - questionText: What does Mario jump on after completing a level
+      answers:
+      - answerText: Mushroom
+        isCorrect: 0
+      - answerText: Brick
+        isCorrect: 0
+      - answerText: Pipe
+        isCorrect: 0
+      - answerText: Flag Pole
+        isCorrect: 1
+    - questionText: What year was Minecraft released
+      answers:
+      - answerText: 2001
+        isCorrect: 0
+      - answerText: 2006
+        isCorrect: 0
+      - answerText: 2009
+        isCorrect: 1
+      - answerText: 2012
+        isCorrect: 0
+    - questionText: What game came bundled with Super Mario on the NES
+      answers:
+      - answerText: Metroid
+        isCorrect: 0
+      - answerText: Paper Boy
+        isCorrect: 0
+      - answerText: Duck Hunt
+        isCorrect: 1
+      - answerText: Snake
+        isCorrect: 0
+    - questionText: When was Grand Theft Auto V released
+      answers:
+      - answerText: 2010
+        isCorrect: 0
+      - answerText: 2013
+        isCorrect: 1
+      - answerText: 2016
+        isCorrect: 0
+      - answerText: 2018
+        isCorrect: 0
+    - questionText: What rank is YouCantSeeeMeee in League of Legends
+      answers:
+      - answerText: Bronze
+        isCorrect: 0
+      - answerText: Wood
+        isCorrect: 0
+      - answerText: Silver
+        isCorrect: 1
+      - answerText: Master
+        isCorrect: 0
+  - name: General
+    timeLimitInSeconds: 30
+    pointsAddedForCorrectAnswer: 1
+    questions:
+    - questionText: What year did Albert Einstein die?
+      answers:
+      - answerText: 1950
+        isCorrect: 0
+      - answerText: 1954
+        isCorrect: 1
+      - answerText: 1958
+        isCorrect: 0
+      - answerText: 1961
+        isCorrect: 0
+    - questionText: How many Presidents have there been in the USA?
+      answers:
+      - answerText: 43
+        isCorrect: 0
+      - answerText: 44
+        isCorrect: 0
+      - answerText: 45
+        isCorrect: 1
+      - answerText: 46
+        isCorrect: 0
+    - questionText: Who has won the most Academy Awards?
+      answers:
+      - answerText: Walt Disney
+        isCorrect: 1
+      - answerText: Steven Spielberg
+        isCorrect: 0
+      - answerText: James Cameron
+        isCorrect: 0
+      - answerText: Katherine Hepburn
+        isCorrect: 0
+    - questionText: What is the largest planet in the solar system
+      answers:
+      - answerText: Jupiter
+        isCorrect: 1
+      - answerText: Neptune
+        isCorrect: 0
+      - answerText: Earth
+        isCorrect: 0
+      - answerText: Saturn
+        isCorrect: 0
+    - questionText: What color is Cerulean
+      answers:
+      - answerText: Red
+        isCorrect: 0
+      - answerText: Blue
+        isCorrect: 1
+      - answerText: Yellow
+        isCorrect: 0
+      - answerText: Green
+        isCorrect: 0
+    - questionText: What are a group of Dolphins called?
+      answers:
+      - answerText: School
+        isCorrect: 0
+      - answerText: Herd
+        isCorrect: 0
+      - answerText: Pool
+        isCorrect: 0
+      - answerText: Pod
+        isCorrect: 1
+    - questionText: Who invented Penicillin
+      answers:
+      - answerText: Alexandra Fleming
+        isCorrect: 1
+      - answerText: Thomas Edison
+        isCorrect: 0
+      - answerText: Marie Curie
+        isCorrect: 0
+      - answerText: George Orwell
+        isCorrect: 0
+    - questionText: "The name of which spice comes from the French word for \u2018nail\u2019?"
+      answers:
+      - answerText: Cinnamon
+        isCorrect: 0
+      - answerText: Clove
+        isCorrect: 1
+      - answerText: Cardamom
+        isCorrect: 0
+      - answerText: Ginger
+        isCorrect: 0
+    - questionText: How many men have walked on the moon?
+      answers:
+      - answerText: 10
+        isCorrect: 0
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 12
+        isCorrect: 1
+      - answerText: 9
+        isCorrect: 0
+    - questionText: "In India, the train Lifeline Express is a\u2026"
+      answers:
+      - answerText: Bank
+        isCorrect: 0
+      - answerText: School
+        isCorrect: 0
+      - answerText: Hospital
+        isCorrect: 1
+      - answerText: Police
+        isCorrect: 0
+    - questionText: Which Asian mountain is also known as the Savage Mountain due
+        to the extreme difficulty of ascent?
+      answers:
+      - answerText: Everest
+        isCorrect: 0
+      - answerText: K2
+        isCorrect: 1
+      - answerText: Lhoste
+        isCorrect: 0
+      - answerText: Kanchenjunga
+        isCorrect: 0
+    - questionText: "In Alice\u2019s Adventures in Wonderland, which game was played
+        by the Queen of Hearts using hedgehogs as balls?"
+      answers:
+      - answerText: Quintet
+        isCorrect: 0
+      - answerText: Bowling
+        isCorrect: 0
+      - answerText: Volleyball
+        isCorrect: 0
+      - answerText: Croquet
+        isCorrect: 1
+    - questionText: Where in the human body is the stapedius muscle situated?
+      answers:
+      - answerText: Nose
+        isCorrect: 0
+      - answerText: Leg
+        isCorrect: 0
+      - answerText: Ears
+        isCorrect: 1
+      - answerText: Eyes
+        isCorrect: 0
+    - questionText: Apart from Venus, which planet rotates from east to west?
+      answers:
+      - answerText: Uranus
+        isCorrect: 1
+      - answerText: Mars
+        isCorrect: 0
+      - answerText: Jupiter
+        isCorrect: 0
+      - answerText: Earth
+        isCorrect: 0
+    - questionText: Which famous world leader was accused at the Rivonia Trial?
+      answers:
+      - answerText: MLK Jr.
+        isCorrect: 0
+      - answerText: Subhas Chandra Rose
+        isCorrect: 0
+      - answerText: Nelson Mandela
+        isCorrect: 1
+      - answerText: Trump
+        isCorrect: 0
+    - questionText: What is parasol a kind of?
+      answers:
+      - answerText: Footwear
+        isCorrect: 0
+      - answerText: Umbrella
+        isCorrect: 1
+      - answerText: Bracelet
+        isCorrect: 0
+      - answerText: Earring
+        isCorrect: 0
+    - questionText: Which is the largest internal organ in the human body?
+      answers:
+      - answerText: Heart
+        isCorrect: 0
+      - answerText: Liver
+        isCorrect: 1
+      - answerText: Lung
+        isCorrect: 0
+      - answerText: Skin
+        isCorrect: 0
+    - questionText: What is the SECOND most expensive property on a Monopoly board?
+      answers:
+      - answerText: Marvin Gardens
+        isCorrect: 0
+      - answerText: Park Place
+        isCorrect: 1
+      - answerText: Baltic Ave
+        isCorrect: 0
+      - answerText: Partners Place
+        isCorrect: 0
+    - questionText: How many states in the US start with the letter 'A'?
+      answers:
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 6
+        isCorrect: 0
+    - questionText: Who invented the first Floppy Disk?
+      answers:
+      - answerText: IBM
+        isCorrect: 1
+      - answerText: Microsoft
+        isCorrect: 0
+      - answerText: Apple
+        isCorrect: 0
+      - answerText: OracleO
+        isCorrect: 0
