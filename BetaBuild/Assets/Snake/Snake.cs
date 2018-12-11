@@ -12,6 +12,7 @@ public class Snake : MonoBehaviour {
 	private float speed = 0.03f;
 	public Text scoreText;
   public Text timeText;
+  public GameObject roundEndDisplay;
   private float timeLeft = 30.0f;
 	public GameObject tailPrefab;
     Vector2 dir = Vector2.right;
@@ -104,8 +105,11 @@ void OnTriggerEnter2D(Collider2D coll) {
         }
 	}
 
-  void EndGame(){
+void EndGame(){
+    Debug.Log("END");
     PlayerPrefs.SetInt("Score", score);
+    //roundEndDisplay.SetActive(true);
+    //yield return new WaitForSeconds(3);
     Destroy(this);
     SceneManager.LoadScene("MainMenu");
   }
