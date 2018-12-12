@@ -63,20 +63,20 @@ public class PlatformController : MonoBehaviour {
         }
 
         //space to jump
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") || Input.GetKeyDown("w") || Input.GetKeyDown("up"))
         {
             //jump = true;
             rb2d.AddForce(new Vector2(0f, jumpForce));
         }
 
         //set direction to left
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") || Input.GetKey("left"))
         {
             isMovedLeft = true;
             isMovedRight = false;
         }
         //Set direction to right
-        else if (Input.GetKey("d"))
+        else if (Input.GetKey("d") || Input.GetKey("right"))
         {
             isMovedRight = true;
             isMovedLeft = false;
