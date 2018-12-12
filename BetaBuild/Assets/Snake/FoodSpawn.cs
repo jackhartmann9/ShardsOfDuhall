@@ -39,12 +39,12 @@ public class FoodSpawn : MonoBehaviour {
 
     //Generate Random X XLocation
     private int XLocation(){
-      return (int)Random.Range(border_left.position.x,
-                                border_right.position.x);
+      return (int)Random.Range(border_left.position.x + buffer,
+                                border_right.position.x - buffer);
     }
     //Generate Random y YLocation
     private int YLocation(){
-      return (int)Random.Range(border_bot.position.y,
-                                border_top.position.y);
+      return (int)Random.Range(border_bot.position.y + buffer,
+                                border_top.position.y - buffer);
     }
 }

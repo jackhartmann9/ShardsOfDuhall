@@ -26,12 +26,12 @@ public class Runner : MonoBehaviour {
             GameOver();
         }
 
-        if (Input.GetKeyDown("w") && transform.position.y != 3)
+        if ((Input.GetKeyDown("w") || Input.GetKeyDown("up") ) && transform.position.y != 3)
         {
             transform.position = new Vector3(-5, transform.position.y +3, 0);
         }
 
-        if (Input.GetKeyDown("s") && transform.position.y != -3)
+        if ((Input.GetKeyDown("s") || Input.GetKeyDown("down") ) && transform.position.y != -3)
         {
             transform.position = new Vector3(-5, transform.position.y -3, 0);
 

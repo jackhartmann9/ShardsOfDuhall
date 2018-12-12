@@ -20,8 +20,8 @@ public class PlatformController : MonoBehaviour {
     //speed scales with time up to maxSpeed
     private float maxSpeed = 15f;
     private float scoreMod = 10;
-    bool isMovedLeft = false;
-    bool isMovedRight = false;
+    private bool isMovedLeft = false;
+    private bool isMovedRight = false;
     //Text pieces of the canvas to display score and Time
   	public Text scoreText;
     public Text timeText;
