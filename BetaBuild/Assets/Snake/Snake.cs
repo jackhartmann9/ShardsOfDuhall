@@ -40,7 +40,6 @@ public class Snake : MonoBehaviour {
         EndGame();
       }
       timeText.text = (timeLeft).ToString("0");
-      UpdateSpeed(timeLeft);
 	  }
 
 

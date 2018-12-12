@@ -99,19 +99,6 @@ public class PlatformController : MonoBehaviour {
 //used for double jump mechanic
 //Used for physics concepts, but adapted to current game
 
-    void FixedUpdate()
-    {
-
-        if (jump)
-        {
-
-            //rb2d.AddForce(new Vector2(0f, jumpForce));
-            //jump = false;
-        }
-    }
-
-    //End the double jump mechanic and Physics concepts
-
 
     void OnCollisionEnter2D(Collision2D coll) {
             Debug.Log("Entered on > " + coll.gameObject.tag);
