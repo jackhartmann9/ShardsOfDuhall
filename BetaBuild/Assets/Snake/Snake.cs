@@ -1,3 +1,8 @@
+/*Jack Hartmann
+  OSIS Games
+*/
+
+
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -20,25 +25,24 @@ public class Snake : MonoBehaviour {
 
 
     void Start () {
+        //Reset main menu player score;
         PlayerPrefs.SetInt("Score", 0);
+        //Manage the movement of the snake head followed by the tail;
         InvokeRepeating("Move", speed, speed);
         dir = Vector2.zero;
     }
 
     // Update is called once per frame
     void Update() {
-        timeLeft -= Time.deltaTime;
-        if(timeLeft < 0f){
-          EndGame();
-        }
-        timeText.text = (timeLeft).ToString("0");
-        UpdateSpeed(timeLeft);
-	}
+      //End Game if the time is over
+      timeLeft -= Time.deltaTime;
+      if(timeLeft < 0f){
+        EndGame();
+      }
+      timeText.text = (timeLeft).ToString("0");
+      UpdateSpeed(timeLeft);
+	  }
 
-   private void UpdateSpeed(float timeLeft){
-     float time = 30.0f - timeLeft;
-     speed += time/15f * 0.05f;
-   }
 
    //Delegate Handling from Input Handler and Move Control
    public void MoveUp(){dir = Vector2.up;}
@@ -48,16 +52,15 @@ public class Snake : MonoBehaviour {
 
    void Move() {
       Vector2 v = transform.position;
-
       transform.Translate(dir);
-
+      //If the good item is eaten the score increases, and the tail grows;
       if (ate) {
           score++;
           scoreText.text = score.ToString();
           AddTail(3);
           ate = false;
-          speed = speed * .7f;
       }
+      //Move THe tail positions
       else if (tail.Count > 0) {
           // Move last Tail Element to where the Head was
           tail.Last().position = v;
@@ -67,7 +70,7 @@ public class Snake : MonoBehaviour {
           tail.RemoveAt(tail.Count-1);
       }
     }
-
+    //Grow the tail of the snake
     private void AddTail(int numTails){
       Vector2 v = transform.position;
       transform.Translate(dir);
@@ -79,33 +82,35 @@ public class Snake : MonoBehaviour {
       }
     }
 
-void OnTriggerEnter2D(Collider2D coll) {
-        // Food?
-        if (coll.gameObject.tag == "Food") {
-            ate = true;
-            Destroy(coll.gameObject);
-        }
-        if (coll.gameObject.tag == "AvoidThis") {
-            score -= 3;
-            Destroy(coll.gameObject);
-            scoreText.text = score.ToString();
-        }
+  void OnTriggerEnter2D(Collider2D coll) {
+          // Food Collision
+          if (coll.gameObject.tag == "Food") {
+              ate = true;
+              Destroy(coll.gameObject);
+          }
 
-        if (coll.gameObject.tag == "EndGame") {
-        	Debug.Log("Dead");
-          EndGame();
+          //Collision with "bad food" that brings score down
+          if (coll.gameObject.tag == "AvoidThis") {
+              score -= 3;
+              Destroy(coll.gameObject);
+              scoreText.text = score.ToString();
+          }
 
-        }
-	}
+          //Collision with the boarders
+          if (coll.gameObject.tag == "EndGame") {
+          	Debug.Log("Dead");
+            EndGame();
+          }
+  	}
 
-void EndGame(){
-    Debug.Log("END");
-    PlayerPrefs.SetInt("Score", score);
-    //roundEndDisplay.SetActive(true);
-    //yield return new WaitForSeconds(3);
-    Destroy(this);
-    SceneManager.LoadScene("MainMenu");
-  }
+  void EndGame(){
+      Debug.Log("END");
+      PlayerPrefs.SetInt("Score", score);
+      //roundEndDisplay.SetActive(true);
+      //yield return new WaitForSeconds(3);
+      Destroy(this);
+      SceneManager.LoadScene("MainMenu");
+    }
 
 
 }

@@ -1,3 +1,10 @@
+/*Jack Hartmann
+  OSIS Games
+
+	This piece of code sets up the delgates in the Move Controll and Snake class
+	Allows for the controls to be isolated in MoveControl
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +20,7 @@ public class InputHandler: MonoBehaviour{
         mouseActions = new List<NoInputAction>();
     }
 
+		//Add the key and its cooresponding action
     public void RegisterKey(string keyCode, NoInputAction actionFunction){
         Debug.Log("keyActions is null? ");
         Debug.Log(""+keyActions == null);
@@ -27,6 +35,6 @@ public class InputHandler: MonoBehaviour{
                 pair.Value();
             }
         }
-      
+
     }
 }
